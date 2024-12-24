@@ -4,6 +4,5 @@ module.exports = {
   theme: {
     extend: {},
   },
-  presets: ['babel-preset-expo'],
-  plugins: ['nativewind/babel'],
+  plugins: [''],
 };
