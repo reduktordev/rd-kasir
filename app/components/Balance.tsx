@@ -22,7 +22,7 @@ export default function Balance() {
                 <View
                     style={{
                         flexDirection: "row",
-                        gap: 10,
+                        justifyContent: "space-between",
                         marginBottom: 6,
                     }}>
                     <Text style={{ fontSize: 14, color: "white", marginLeft: 0 }}>
@@ -35,7 +35,7 @@ export default function Balance() {
                 <View
                     style={{
                         flexDirection: "row",
-                        gap: 10,
+                        justifyContent: "space-between",
                         marginBottom: 6,
                     }}>
                     <Text style={{ fontSize: 14, color: "white", marginLeft: 0 }}>
@@ -48,7 +48,7 @@ export default function Balance() {
                 <View
                     style={{
                         flexDirection: "row",
-                        gap: 10,
+                        justifyContent: "space-between",
                         marginBottom: 6,
                     }}>
                     <Text style={{ fontSize: 14, color: "white", marginLeft: 0 }}>

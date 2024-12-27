@@ -5,9 +5,6 @@ import tw from 'tailwind-react-native-classnames';
 import Navbar from '@/app/components/Navbar';
 import DatePicker from '@/app/components/Date';
 import Balance from '@/app/components/Balance';
-import PilihBarang from '@/app/components/PilihBarang';
-import Total from '@/app/components/Total';
-// import Barang from '@/app/components/Barang';
 
 
 const Home = () => {
@@ -32,20 +29,9 @@ const Home = () => {
             <View style={tw`mb-4`}>
                 <Balance />
             </View>
-            <View style={tw`mb-4`}>
-                <PilihBarang />
-            </View>
-            <View style={tw`mb-4`}>
-                <Total />
-            </View>
-            {/* <View style={tw`mb-4`}>
-                <Barang />
-            </View> */}
         </ScrollView>
       </KeyboardAvoidingView>
     </GestureHandlerRootView>
-
-
   );
 };
 
