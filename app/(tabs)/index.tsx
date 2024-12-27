@@ -23,7 +23,7 @@ const LoginScreen = () => {
           keyboardShouldPersistTaps="handled"
         >
           {/* Header */}
-          <View style={tw`bg-red-500 py-12 items-center`}>
+          <View style={tw`bg-red-600 py-12 items-center`}>
             <Text style={tw`text-white text-3xl font-bold`}>mY</Text>
             <Text style={tw`text-white text-4xl font-bold`}>Cashier</Text>
           </View>
@@ -51,7 +51,7 @@ const LoginScreen = () => {
 
             {/* Login Button */}
             <TouchableOpacity
-              style={tw`bg-red-500 h-12 rounded-lg justify-center`}
+              style={tw`bg-red-600 h-12 rounded-lg justify-center`}
               onPress={handleLogin}
             >
               <Text style={tw`text-white text-center font-bold text-lg`}>
