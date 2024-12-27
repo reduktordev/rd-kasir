@@ -4,6 +4,7 @@ import { View, Text, TextInput, TouchableOpacity, ScrollView, KeyboardAvoidingVi
 import tw from 'tailwind-react-native-classnames';
 import Navbar from '@/app/components/Navbar';
 import DatePicker from '@/app/components/Date';
+import Balance from '@/app/components/Balance';
 
 
 const Home = () => {
@@ -24,7 +25,10 @@ const Home = () => {
             </View>
             <View style={tw`mb-4`}>
                 <DatePicker />
-          </View>
+            </View>
+            <View style={tw`mb-4`}>
+                <Balance />
+            </View>
         </ScrollView>
       </KeyboardAvoidingView>
     </GestureHandlerRootView>

@@ -37,7 +37,7 @@ const DatePicker = () => {
         }}
       >
         <Icon name="calendar-month" size={20} color="red" />
-        <Text style={{ color: 'red', fontSize: 16,}}>
+        <Text style={{ color: 'black', fontSize: 16,}}>
            ({formatDate(date)})
         </Text>
       </TouchableOpacity>
