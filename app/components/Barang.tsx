@@ -32,6 +32,20 @@ const Barang = () => {
       description: "This is product 4",
       image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Oreo-Two-Cookies.png/1200px-Oreo-Two-Cookies.png",
     },
+    {
+        id: 5,
+        name: "Product 5",
+        price: 8.99,
+        description: "This is product 3",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Oreo-Two-Cookies.png/1200px-Oreo-Two-Cookies.png",
+      },
+      {
+        id: 6,
+        name: "Product 6",
+        price: 15.49,
+        description: "This is product 4",
+        image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Oreo-Two-Cookies.png/1200px-Oreo-Two-Cookies.png",
+      },
   ];
 
   const renderItem = ({
