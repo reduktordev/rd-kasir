@@ -4,6 +4,7 @@ import { Platform } from 'react-native';
 
 import { HapticTab } from '@/components/HapticTab';
 import { IconSymbol } from '@/components/ui/IconSymbol';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 import TabBarBackground from '@/components/ui/TabBarBackground';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
@@ -20,26 +21,41 @@ export default function TabLayout() {
         tabBarBackground: TabBarBackground,
         tabBarStyle: Platform.select({
           ios: {
-            // Use a transparent background on iOS to show the blur effect
-            position: 'absolute',
+            position: 'absolute', // Use a transparent background on iOS to show the blur effect
           },
-          default: {},
+          default: {
+            backgroundColor: 'white',
+          },
         }),
       }}>
       <Tabs.Screen
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          tabBarIcon: ({ color }) => <IconSymbol size={24} name="house.fill" color={color} />,
         }}
       />
       <Tabs.Screen
         name="explore"
         options={{
           title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          tabBarIcon: ({ color }) => <IconSymbol size={24} name="paperplane.fill" color={color} />,
         }}
       />
+      <Tabs.Screen
+        name="cashier"
+        options={{
+          title: 'Cashier',
+          tabBarIcon: ({ color }) => <Icon name="attach-money" size={24} color={color} />, // Replace "cashregister" with the correct icon name for your design
+        }}
+      />
+      {/* <Tabs.Screen
+        name="activity"
+        options={{
+          title: 'Activity',
+          tabBarIcon: ({ color }) => <Icon name="calendar-month" size={20} color={color} /> // Replace "list.bullet" with the correct icon name for your design
+        }}
+      /> */}
     </Tabs>
   );
 }

@@ -5,6 +5,8 @@ import tw from 'tailwind-react-native-classnames';
 import Navbar from '@/app/components/Navbar';
 import DatePicker from '@/app/components/Date';
 import Balance from '@/app/components/Balance';
+import PilihBarang from '@/app/components/PilihBarang';
+import Total from '@/app/components/Total';
 
 
 const Home = () => {
@@ -32,6 +34,8 @@ const Home = () => {
         </ScrollView>
       </KeyboardAvoidingView>
     </GestureHandlerRootView>
+
+
   );
 };
 

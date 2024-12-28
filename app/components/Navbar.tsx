@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const Navbar = () => {
   return (
-    <View style={tw`flex-row p-4 mt-4 justify-between items-center bg-white shadow-md`}>
+    <View style={tw`flex-row p-4 justify-between items-center bg-white shadow-md`}>
       <TouchableOpacity style={tw`flex-row items-center`}>
         <Text style={tw`text-black font-bold text-lg mr-2`}>mY</Text>
         <Text style={tw`text-red-600 font-bold text-lg`}>Cashier</Text>
