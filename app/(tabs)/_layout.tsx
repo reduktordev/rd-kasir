@@ -49,6 +49,13 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <Icon name="attach-money" size={24} color={color} />, // Replace "cashregister" with the correct icon name for your design
         }}
       />
+      <Tabs.Screen
+        name="stock"
+        options={{
+          title: 'Stock',
+          tabBarIcon: ({ color }) => <Icon name="inventory-2" size={24} color={color} />, // Replace "cashregister" with the correct icon name for your design
+        }}
+      />
       {/* <Tabs.Screen
         name="activity"
         options={{
