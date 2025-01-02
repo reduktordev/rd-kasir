@@ -32,30 +32,30 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={24} name="house.fill" color={color} />,
+          tabBarIcon: ({ color }) => <IconSymbol size={24} name="house.fill" color={color} />
         }}
       />
       <Tabs.Screen
         name="cashier"
         options={{
           title: 'Cashier',
-          tabBarIcon: ({ color }) => <Icon name="attach-money" size={24} color={color} />, // Replace "cashregister" with the correct icon name for your design
+          tabBarIcon: ({ color }) => <Icon name="attach-money" size={24} color={color} />
         }}
       />
       <Tabs.Screen
         name="stock"
         options={{
           title: 'Stock',
-          tabBarIcon: ({ color }) => <Icon name="inventory-2" size={24} color={color} />, // Replace "cashregister" with the correct icon name for your design
+          tabBarIcon: ({ color }) => <Icon name="inventory-2" size={24} color={color} />
         }}
       />
-      {/* <Tabs.Screen
+      <Tabs.Screen
         name="activity"
         options={{
           title: 'Activity',
-          tabBarIcon: ({ color }) => <Icon name="calendar-month" size={20} color={color} /> // Replace "list.bullet" with the correct icon name for your design
+          tabBarIcon: ({ color }) => <Icon name="receipt" size={20} color={color} />
         }}
-      /> */}
+      />
     </Tabs>
   );
 }
