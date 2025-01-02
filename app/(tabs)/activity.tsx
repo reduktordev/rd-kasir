@@ -5,6 +5,7 @@ import { GestureHandlerRootView, ScrollView } from "react-native-gesture-handler
 import Navbar from "../components/Navbar";
 import DatePicker from "../components/Date";
 import IncomeCard from "../components/IncomeCard";
+import DaftarTransaksi from "../components/DaftarTransaksi";
 
 export default function Activity (){
     return (
@@ -23,8 +24,11 @@ export default function Activity (){
             <View style={tw`mb-4`}>
                 <DatePicker />
             </View>
-            <View>
+            <View style={tw`mb-4`}>
                 <IncomeCard />
+            </View>
+            <View style={tw`mb-4`}>
+                <DaftarTransaksi />
             </View>
         </ScrollView>
       </KeyboardAvoidingView>
