@@ -16,7 +16,7 @@ import Balance from "@/app/components/Balance";
 import Pilihbarang from "@/app/components/PilihBarang";
 import Total from "@/app/components/Total";
 
-const Home = () => {
+const Cashier = () => {
     return (
         <GestureHandlerRootView style={{ flex: 1 }}>
             <KeyboardAvoidingView
@@ -40,4 +40,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default Cashier;

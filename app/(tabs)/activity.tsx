@@ -1,9 +1,34 @@
-import { Text, View } from "react-native";
+import { KeyboardAvoidingView, Platform, View } from "react-native";
+import tw from "tailwind-react-native-classnames";
+import Kategori from "../components/Kategori";
+import { GestureHandlerRootView, ScrollView } from "react-native-gesture-handler";
+import Navbar from "../components/Navbar";
+import DatePicker from "../components/Date";
+import IncomeCard from "../components/IncomeCard";
 
-export default function Activity(){
+export default function Activity (){
     return (
-        <View>
-            <Text>Activity</Text>
-        </View>
+        <GestureHandlerRootView style={{ flex: 1 }}>
+      <KeyboardAvoidingView
+        style={tw`flex-1`}
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+      >
+        <ScrollView
+          contentContainerStyle={tw`flex-grow bg-white`}
+          keyboardShouldPersistTaps="handled"
+        >
+            <View style={tw`mb-4`}>
+                <Navbar />
+            </View>
+            <View style={tw`mb-4`}>
+                <DatePicker />
+            </View>
+            <View>
+                <IncomeCard />
+            </View>
+        </ScrollView>
+      </KeyboardAvoidingView>
+    </GestureHandlerRootView>
+
     )
 }
