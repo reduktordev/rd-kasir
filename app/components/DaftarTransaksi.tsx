@@ -59,11 +59,6 @@ export default function DaftarTransaksi() {
             style={{
                 width: "100%",
                 paddingVertical: 24,
-                shadowColor: "#000",
-                shadowOffset: { width: 0, height: 2 },
-                shadowOpacity: 0.25,
-                shadowRadius: 3.84,
-                elevation: 5,
             }}>
             <Text
                 style={{
