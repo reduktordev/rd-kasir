@@ -13,7 +13,13 @@ import {
 } from "react-native";
 import Icon from "react-native-vector-icons/MaterialIcons";
 
-export default function AddKategoriModal({ visible, onClose, onAdd }) {
+interface AddKategoriModalProps {
+    visible: boolean;
+    onClose: () => void;
+    onAdd: (category: { name: string; image: string }) => void;
+}
+
+export default function AddKategoriModal({ visible, onClose, onAdd }: AddKategoriModalProps ) {
     const [categoryName, setCategoryName] = useState("");
     const [categoryImage, setCategoryImage] = useState("");
 
