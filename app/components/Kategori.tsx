@@ -65,7 +65,7 @@ export default function Kategori() {
                                 shadowRadius: 3.84,
                                 elevation: 5,
                                 borderRadius: 5,
-                                padding: 12,
+                                padding: 11,
                             }}
                         >
                             <Image

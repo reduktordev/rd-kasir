@@ -65,7 +65,7 @@ export default function AddKategoriModal({ visible, onClose, onAdd }: AddKategor
                                 justifyContent: "center",
                                 marginTop: 16,
                             }}>
-                            <TouchableOpacity style={{ width: "70%", borderRadius: 8}} onPress={handleAdd}>
+                            <TouchableOpacity style={{ width: "60%", borderRadius: 8}} onPress={handleAdd}>
                                 <LinearGradient
                                                     colors={["#C21D03", "#FD5732"]}
                                                     start={{ x: 0, y: 0 }}

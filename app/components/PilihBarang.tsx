@@ -1,94 +1,50 @@
-import React, { useState } from "react";
-import {
-    View,
-    Text,
-    TouchableOpacity,
-    TextInput,
-    Modal,
-    Button,
-} from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
+import { TextInput } from "react-native-gesture-handler";
 import Barang from "./Barang";
-const Pilihbarang = () => {
-    const [selectedBarang, setSelectedBarang] = useState<string | null>(null);
-    const [isModalVisible, setModalVisible] = useState(false);
+import { useState } from "react";
 
-    const handlePilihBarangClick = (barang: string) => {
-        setSelectedBarang(barang === selectedBarang ? null : barang);
-        setModalVisible(true);
-    };
+export default function PilihBarang() {
+  const [barangModalVisible, setBarangModalVisible] = useState(false);
 
-    const handleCloseModal = () => {
-        setModalVisible(false);
-    };
+  const handleBarangClick = () => {
+    setBarangModalVisible(true);
+  };
 
-    return (
-        <View
-            style={{
-                width: "100%",
-                flexDirection: "column",
-                justifyContent: "center",
-                gap: 12,
-                padding: 15,
-            }}>
-            <TouchableOpacity onPress={() => handlePilihBarangClick("barang1")}>
-                <Text style={{ fontSize: 20, fontWeight: "500" }}>
-                    Pilih Barang 1
-                </Text>
-            </TouchableOpacity>
-            <TextInput
-                style={{
-                    width: "100%",
-                    height: 50,
-                    borderColor: "gray",
-                    borderWidth: 2,
-                    borderRadius: 5,
-                    paddingHorizontal: 15,
-                    paddingVertical: 5,
-                    backgroundColor: "white",
-                }}
-                placeholder="Pilih Barang 1"
-            />
+  return (
+    <View
+      style={{
+        width: "100%",
+        flexDirection: "column",
+        justifyContent: "center",
+        gap: 12,
+        padding: 15,
+      }}
+    >
+      {/* Button to open the Barang modal */}
+      <TouchableOpacity onPress={handleBarangClick}>
+        <Text style={{ fontSize: 20, fontWeight: "500" }}>Pilih Barang 1</Text>
+      </TouchableOpacity>
 
-            <Modal
-                visible={isModalVisible}
-                animationType="slide"
-                transparent={true}
-                onRequestClose={handleCloseModal}>
-                <View
-                    style={{
-                        flex: 1,
-                        justifyContent: "center",
-                        alignItems: "center",
-                        backgroundColor: "rgba(0, 0, 0, 0.5)", 
-                    }}>
-                    <View
-                        style={{
-                            width: "100%",
-                            backgroundColor: "white",
-                            paddingHorizontal: 10,
-                            paddingVertical: 50,
-                            borderRadius: 10,
-                            elevation: 5,
-                        }}>
-                        <Text
-                            style={{
-                                fontSize: 20,
-                                fontWeight: "500",
-                                marginBottom: 10,
-                            }}>
-                            {selectedBarang
-                                ? selectedBarang === "barang1"
-                                    ? "Barang 1"
-                                    : "Barang 2"
-                                : "No Barang Selected"}
-                        </Text>
-                        <Barang />
-                        <Button title="Close" onPress={handleCloseModal} />
-                    </View>
-                </View>
-            </Modal>
-        </View>
-    );
-};
+      {/* Input field */}
+      <TextInput
+        style={{
+          width: "100%",
+          height: 50,
+          borderColor: "gray",
+          borderWidth: 2,
+          borderRadius: 5,
+          paddingHorizontal: 15,
+          paddingVertical: 5,
+          backgroundColor: "white",
+        }}
+        placeholder="Pilih Barang 1"
+      />
 
-export default Pilihbarang;
+      {/* Barang Modal */}
+      <Barang
+        visible={barangModalVisible}
+        onClose={() => setBarangModalVisible(false)}
+      />
+    </View>
+  );
+}
