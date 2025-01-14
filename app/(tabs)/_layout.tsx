@@ -56,6 +56,13 @@ export default function TabLayout() {
           tabBarIcon: ({ color }) => <Icon name="receipt" size={20} color={color} />
         }}
       />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: 'Profile',
+          tabBarIcon: ({ color }) => <Icon name="account-circle" size={20} color={color} />
+        }}
+      />
     </Tabs>
   );
 }
